@@ -1,6 +1,6 @@
 import Dependencies._
 
-ThisBuild / organization := "dev.insideyou"
+ThisBuild / organization := "vishnu"
 ThisBuild / scalaVersion := "3.1.0"
 
 ThisBuild / scalacOptions ++=
@@ -13,7 +13,7 @@ ThisBuild / scalacOptions ++=
     "-Yexplicit-nulls", // experimental (I've seen it cause issues with circe)
     "-Ykind-projector",
     "-Ysafe-init", // experimental (I've seen it cause issues with circe)
-  ) ++ Seq("-rewrite", "-indent") ++ Seq("-source", "future")
+  ) ++ Seq("-source", "future")
 
 lazy val `advent-of-code-2021` =
   project
