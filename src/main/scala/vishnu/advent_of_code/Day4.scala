@@ -1,8 +1,8 @@
 package vishnu.advent_of_code
 
-import vishnu.advent_of_code.Day4Objects.BingoBoard
+import vishnu.advent_of_code.Day4Helper.BingoBoard
 
-object Day4Objects {
+object Day4Helper {
   import scala.language.unsafeNulls
 
   final case class BingoBoard(board: Array[Array[Int]]) {
@@ -46,12 +46,12 @@ object Day4 {
     def getInputs() = {
 //      val input = readInput("Day4.sample").toList
       val input = readInput("Day4.input").toList
-      val randomNumbers = Day4Objects.getNumbers(input.head).toSeq
+      val randomNumbers = Day4Helper.getNumbers(input.head).toSeq
       val iterator = input.tail.iterator
       val boards = scala.collection.mutable.ArrayBuffer[BingoBoard]()
       while (iterator.nonEmpty) {
         iterator.next()
-        val board = Day4Objects.getBingoBoard(iterator.take(5).toList)
+        val board = Day4Helper.getBingoBoard(iterator.take(5).toList)
         boards += board
       }
       randomNumbers -> boards.toList
