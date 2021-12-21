@@ -10,6 +10,8 @@ object Day6 {
       line.split(",").filterNot(_.isEmpty).map(_.toInt)
     }.toList
 
+    println(ages.size)
+
     println("star1")
     star1(ages)
     println()
