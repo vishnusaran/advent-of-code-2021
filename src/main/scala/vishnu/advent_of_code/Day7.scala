@@ -1,6 +1,6 @@
 package vishnu.advent_of_code
 
-object Day7 {
+object Day7 extends TimeOps {
   def main(args: Array[String]): Unit = {
 //    val input = readInput("Day7.sample").toList
     val input = readInput("Day7.input").toList
@@ -13,10 +13,11 @@ object Day7 {
     println(positions.max)
 
     println("star1")
-    star1(positions)
+
+    (star1(positions)).time
     println()
     println("star2")
-    star2(positions)
+    star2(positions).time
 
   }
   def star1(positions: Array[Int]) = {
